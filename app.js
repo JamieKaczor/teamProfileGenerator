@@ -11,6 +11,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
+// Create an id array to store the ids
+// This array will be used to check the potential duplicates id newly entered by user
 const idArray = [];
 
 function appMenu() {
