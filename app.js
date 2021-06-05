@@ -8,7 +8,10 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./lib/htmlRenderer");
+// Rendering function
+const render = require("./lib/page-template.js");
+// Alternative rendering function
+// const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
 // Create an id array to store the ids
@@ -20,6 +23,26 @@ function appMenu() {
   function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
+      {
+        type: "input",
+        name: "managerName",
+        message: "Manager's Name:"
+      },
+      {
+        type: "input",
+        name: "managerId",
+        message: "Manager's ID:"
+      },
+      {
+        type: "input",
+        name: "managerEmail",
+        message: "Manager's Email:"
+      },
+      {
+        type: "input",
+        name: "officeNumber",
+        message: "What is your office number?"
+      }
       //
       // YOUR CODE HERE:
       // CREATE OBJECTS OF QUESTIONS HERE FOR MANAGER
@@ -61,6 +84,26 @@ function appMenu() {
 
   function addEngineer() {
     inquirer.prompt([
+      {
+        type: "input",
+        name: "engineerName",
+        message: "Engineer's Name:"
+      },
+      {
+        type: "input",
+        name: "engineerId",
+        message: "Engineer's ID:"
+      },
+      {
+        type: "input",
+        name: "engineerEmail",
+        message: "Engineer's Email:"
+      },
+      {
+        type: "input",
+        name: "engineerGithub",
+        message: "Engineer's Github:"
+      }
       //
       // YOUR CODE HERE
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
@@ -80,6 +123,26 @@ function appMenu() {
 
   function addIntern() {
     inquirer.prompt([
+      {
+        type: "input",
+        name: "internName",
+        message: "Intern's Name:"
+      },
+      {
+        type: "input",
+        name: "internId",
+        message: "Intern's ID:"
+      },
+      {
+        type: "input",
+        name: "internEmail",
+        message: "Intern's Email:"
+      },
+      {
+        type: "input",
+        name: "internSchool",
+        message: "Intern's school?"
+      }
       //
       // YOUR CODE HERE
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
