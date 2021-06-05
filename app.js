@@ -40,8 +40,8 @@ function appMenu() {
       },
       {
         type: "input",
-        name: "officeNumber",
-        message: "What is your office number?"
+        name: "managerOfficeNumber",
+        message: "Manager's Office Number:"
       }
       //
       // YOUR CODE HERE:
@@ -109,6 +109,10 @@ function appMenu() {
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
       //
     ]).then(answers => {
+      
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+      teamMembers.push(engineer);
+      idArray.push(answers.engineerId);
       //
       // YOUR CODE HERE
       // 1. CREATE A VARIABLE TO STORE THE ENGINEER OBJECT INSTANTIATED WITH THE ENGINEER CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
@@ -141,13 +145,17 @@ function appMenu() {
       {
         type: "input",
         name: "internSchool",
-        message: "Intern's school?"
+        message: "Intern's school:"
       }
       //
       // YOUR CODE HERE
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
       //
     ]).then(answers => {
+      
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+      teamMembers.push(intern);
+      idArray.push(answers.internId);
       //
       // YOUR CODE HERE
       // 1. CREATE A VARIABLE TO STORE THE INTERN OBJECT INSTANTIATED WITH THE INTERN CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
