@@ -19,7 +19,7 @@ const teamMembers = [];
 const idArray = [];
 
 function appMenu() {
-
+// Questions for manager build
   function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
@@ -43,10 +43,7 @@ function appMenu() {
         name: "managerOfficeNumber",
         message: "Manager's Office Number:"
       }
-      //
-      // YOUR CODE HERE:
-      // CREATE OBJECTS OF QUESTIONS HERE FOR MANAGER
-      //
+// adds manager variable to teamMember array and manager id to idArray
     ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
@@ -81,7 +78,7 @@ function appMenu() {
       }
     });
   }
-
+// questions for engineer build
   function addEngineer() {
     inquirer.prompt([
       {
@@ -104,27 +101,17 @@ function appMenu() {
         name: "engineerGithub",
         message: "Engineer's Github:"
       }
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
+   
     ]).then(answers => {
-      
+      // adds engineer variable to teamMember array and engineer id to idArray
       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
       teamMembers.push(engineer);
       idArray.push(answers.engineerId);
-      //
-      // YOUR CODE HERE
-      // 1. CREATE A VARIABLE TO STORE THE ENGINEER OBJECT INSTANTIATED WITH THE ENGINEER CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
-      //    TO THE ENGINEER CLASS CONSTRUCTOR
-      // 2. ADD (PUSH) THE ENGINEER VARIABLE TO the teamMembers ARRAY
-      // 3. ADD (PUSH) THE ENGINERR ID TO THE idArray ARRAY
-      // 
- 
+  
       createTeam();
     });
   }
-
+// questions for intern build
   function addIntern() {
     inquirer.prompt([
       {
@@ -147,23 +134,13 @@ function appMenu() {
         name: "internSchool",
         message: "Intern's school:"
       }
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
+    
     ]).then(answers => {
-      
+      // adds intern variable to teamMember array and intern id to idArray
       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
       teamMembers.push(intern);
       idArray.push(answers.internId);
-      //
-      // YOUR CODE HERE
-      // 1. CREATE A VARIABLE TO STORE THE INTERN OBJECT INSTANTIATED WITH THE INTERN CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
-      //    TO THE INTERN CLASS CONSTRUCTOR
-      // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
-      // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
-      // 
-
+   
       createTeam();
     });
   }
