@@ -6,6 +6,7 @@
 - [Project Description](#project-description)
 - [Installation](#installation)
 - [Tests](#tests)
+- [Technologies Used](#technologies-used)
 - [Screenshot and link to live demo](#screenshot-and-link-to-live-demo)
 - [Questions](#questions)
 
@@ -17,6 +18,12 @@ npm init -y, npm i
 
 ## Tests
 npm run test
+
+## Technologies Used
+- JavaScript(Constructors/Prototypes)
+- Node.js
+- Jest
+- Inquirer
 
 ## Screenshot and link to live demo
 ![screenshot](./images/tpginuse.png)
